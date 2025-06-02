@@ -23,7 +23,7 @@ int penuh(Stack *S){
 int kosong(Stack *S){
     return (S->Count == 0);
 }
-void pop(Stack *S, tipeItem *x) {
+void pop(Stack *S, TipeItem *x) {
     if (kosong(S)) {
         cout << "Stack kosong!" << endl;
     } else {

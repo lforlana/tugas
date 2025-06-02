@@ -38,3 +38,29 @@ void push(tipeItem x, Stack *S){
         S->Item[S->Count] = x;
         ++(S->Count);
     }
+    }
+
+int main(){
+    Stack alam;
+    awal(&alam);
+
+    tipeItem *damn = lana.Item;
+    pop(&lana, damn);
+    push(99, &lana);
+    push(73, &lana);
+    push(23, &lana);
+    push(88, &lana);
+    pop(&lana, damn);
+    push(12, &lana);
+    push(65, &lana);
+    push(53, &lana);
+    push(45, &lana);
+    push(34, &lana);
+    push(78, &lana);
+    push(90, &lana);
+    pop(&lana, damn);
+    push(100, &lana);
+    push(101, &lana);
+    push(102, &lana);
+    return 0;
+}

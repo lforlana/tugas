@@ -31,3 +31,10 @@ void pop(Stack *S, TipeItem *x) {
         *x = S->Item[S->Count];
     }
 }
+void push(tipeItem x, Stack *S){
+    if (penuh(S)) {
+        cout << "Stack penuh!" << endl;
+    } else {
+        S->Item[S->Count] = x;
+        ++(S->Count);
+    }

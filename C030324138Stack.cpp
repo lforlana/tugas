@@ -3,9 +3,9 @@
 using namespace std;
 #define MAXTUMPUKAN 10
 
-typedef int tipeItem;
+typedef int tipeitem;
 typedef struct {
-    tipeItem Item[MAXTUMPUKAN];
+    tipeitem Item[MAXTUMPUKAN];
     int Count;
 } Stack;
 

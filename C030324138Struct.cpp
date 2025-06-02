@@ -1,35 +1,35 @@
-#include "conio.h"
-#include "stdio.h"
-#include "string.h"
 #include <iostream>
-
+#include <string>
 using namespace std;
 
-struct mahasiswa
-{
-    int ipk;
-    string nim;
-    string nama;
-    string alamat;
-    string jurusan;
-    string kelas;
+    struct mahasiswa{
+	string nim;
+	string nama;
+	string alamat;
+	float ipk;
 };
 
+int inputData(string *nim, string *nama, string *alamat, float *ipk) {
+    cout << "NIM = ";          getline(cin, *nim);
+    cout << "Nama = ";         getline(cin, *nama);
+    cout << "Alamat = ";       getline(cin, *alamat);
+    cout << "IPK = ";          cin >> *ipk;
+    cin.ignore();
+}
+
+void outputData(const mahasiswa &lana) {
+    system("cls");
+    cout << "\n------------- Data ------------- :\n";
+    cout << "NIM    : " << lana.nim << endl;
+    cout << "Nama   : " << lana.nama << endl;
+    cout << "Alamat : " << lana.alamat << endl;
+    cout << "ipk    : " << lana.ipk << endl;
+    cout << "---------------------------------------\n";
+}
 
 int main() {
-    struct mahasiswa lana;
-    lana.ipk = 4;
-    lana.nim = "C030324138";
-    lana.nama = "lana";
-    lana.alamat = "Sungai Lulut";
-    lana.jurusan = "TI";
-    lana.kelas = "Kelas 2B";
-    
-
-    cout << "NIM: " << lana.nim << endl;
-    cout << "IPK: " << lana.ipk << endl;
-    cout << "Nama: " << lana.nama << endl;
-    cout << "Alamat: " << lana.alamat << endl;
-    cout << "Jurusan: " << lana.jurusan << endl;
-    cout << "Kelas: " << lana.kelas << endl;
+    mahasiswa lana;
+    inputData(&lana.nim, &lana.nama, &lana.alamat, &lana.ipk);
+    outputData(lana);
+    return 0;
 }

@@ -8,3 +8,7 @@ typedef struct {
     tipeItem Item[MAXTUMPUKAN];
     int Count;
 } Stack;
+
+void InitializeStack(Stack *S){
+    S->count = 0;
+}
